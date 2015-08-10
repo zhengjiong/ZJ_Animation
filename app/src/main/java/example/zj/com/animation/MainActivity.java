@@ -10,7 +10,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import example.zj.com.animation.propertyanimation.PerpertyAnimationActivity;
+import example.zj.com.animation.fragment.FragmentAnimActivity;
+import example.zj.com.animation.propertyanimation.PropertyAnimationActivity;
 
 
 /**
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class MainFragment extends ListFragment{
-        String [] items = {"ProperyAnimation"};
+        String [] items = {"Propery Animation", "Fragment Switch Animation"};
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
@@ -70,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
         public void onListItemClick(ListView l, View v, int position, long id) {
             switch (position) {
                 case 0:
-                    startActivity(new Intent(getActivity(), PerpertyAnimationActivity.class));
+                    startActivity(new Intent(getActivity(), PropertyAnimationActivity.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(getActivity(), FragmentAnimActivity.class));
                     break;
             }
         }

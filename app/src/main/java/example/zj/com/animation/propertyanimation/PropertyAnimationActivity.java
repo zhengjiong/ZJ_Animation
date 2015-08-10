@@ -14,7 +14,7 @@ import example.zj.com.animation.R;
  * 属性动画
  * Created by zhengjiong on 15/8/8.
  */
-public class PerpertyAnimationActivity extends AppCompatActivity{
+public class PropertyAnimationActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class PerpertyAnimationActivity extends AppCompatActivity{
     }
 
     class MainFragment extends ListFragment {
-        String [] items = {"ValueAnimation", "ObjectAnimation", "CustomTypeEvalutor", "AnimatorSet"};
+        String[] items = {"ValueAnimation", "ObjectAnimation", "CustomTypeEvalutor", "AnimatorSet", "XMLAnimatorDemo", "LayoutTransition", "CustomLayoutTransition", "ViewAnimate Method"};
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
@@ -43,16 +43,28 @@ public class PerpertyAnimationActivity extends AppCompatActivity{
         public void onListItemClick(ListView l, View v, int position, long id) {
             switch (position) {
                 case 0:
-                    startActivity(new Intent(PerpertyAnimationActivity.this, ValueAnimationDemo.class));
+                    startActivity(new Intent(PropertyAnimationActivity.this, ValueAnimationDemo.class));
                     break;
                 case 1:
-                    startActivity(new Intent(PerpertyAnimationActivity.this, ObjectAnimationDemo.class));
+                    startActivity(new Intent(PropertyAnimationActivity.this, ObjectAnimationDemo.class));
                     break;
                 case 2:
-                    startActivity(new Intent(PerpertyAnimationActivity.this, CustomTypeEvalutorDemo.class));
+                    startActivity(new Intent(PropertyAnimationActivity.this, CustomTypeEvalutorDemo.class));
                     break;
                 case 3:
-                    startActivity(new Intent(PerpertyAnimationActivity.this, AnimatorSetDemo.class));
+                    startActivity(new Intent(PropertyAnimationActivity.this, AnimatorSetDemo.class));
+                    break;
+                case 4:
+                    startActivity(new Intent(PropertyAnimationActivity.this, XMLAnimatorDemo.class));
+                    break;
+                case 5:
+                    startActivity(new Intent(PropertyAnimationActivity.this, LayoutTransitionDemo.class));
+                    break;
+                case 6:
+                    startActivity(new Intent(PropertyAnimationActivity.this, CustomLayoutTransitionDemo.class));
+                    break;
+                case 7:
+                    startActivity(new Intent(PropertyAnimationActivity.this, ViewAnimateDemo.class));
                     break;
             }
 

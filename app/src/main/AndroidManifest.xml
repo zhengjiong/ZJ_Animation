@@ -16,11 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".propertyanimation.PerpertyAnimationActivity"/>
+        <activity android:name=".propertyanimation.PropertyAnimationActivity"/>
         <activity android:name=".propertyanimation.ValueAnimationDemo"/>
         <activity android:name=".propertyanimation.ObjectAnimationDemo"/>
         <activity android:name=".propertyanimation.CustomTypeEvalutorDemo"/>
         <activity android:name=".propertyanimation.AnimatorSetDemo"/>
+        <activity android:name=".propertyanimation.XMLAnimatorDemo"/>
+        <activity android:name=".propertyanimation.LayoutTransitionDemo"/>
+        <activity android:name=".propertyanimation.CustomLayoutTransitionDemo"/>
+        <activity android:name=".propertyanimation.ViewAnimateDemo"/>
+        <activity android:name=".fragment.FragmentAnimActivity"/>
     </application>
 
 </manifest>
