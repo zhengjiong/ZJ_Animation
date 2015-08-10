@@ -1,5 +1,8 @@
-# Animation
-Android Animation demo
+# Android Animation demo
 
-> * PropertyAnimation demo
-> * Fragment switch anmiation
+----------
+
+ -  PropertyAnimation demo
+ -  Fragment switch anmiation
+
+
