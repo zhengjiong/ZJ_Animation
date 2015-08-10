@@ -2,7 +2,7 @@
 
 ----------
 
- -  PropertyAnimation demo
- -  Fragment switch anmiation
+> * PropertyAnimation demo
+> * Fragment switch anmiation
 
 
