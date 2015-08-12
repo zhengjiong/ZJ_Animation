@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import example.zj.com.animation.fragment.FragmentAnimActivity;
+import example.zj.com.animation.material.MaterialAnimationActivity;
 import example.zj.com.animation.propertyanimation.PropertyAnimationActivity;
 
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class MainFragment extends ListFragment{
-        String [] items = {"Propery Animation", "Fragment Switch Animation"};
+        String [] items = {"Propery Animation", "Fragment Switch Animation", "Material Animation"};
 
         @Override
         public void onActivityCreated(Bundle savedInstanceState) {
@@ -75,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 1:
                     startActivity(new Intent(getActivity(), FragmentAnimActivity.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(getActivity(), MaterialAnimationActivity.class));
                     break;
             }
         }

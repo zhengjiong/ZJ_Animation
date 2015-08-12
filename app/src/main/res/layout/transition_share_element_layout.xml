@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<ImageView
+        android:id="@+id/img_circle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/circle_bg"
+        android:layout_margin="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"/>-->
+    <ImageView
+        android:id="@+id/floating_circle_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:elevation="10dp"
+        android:tint="@android:color/white"
+        android:background="@drawable/circle_bg"
+        android:scaleType="center"
+        android:src="@android:drawable/ic_input_add"/>
+</FrameLayout>

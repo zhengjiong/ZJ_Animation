@@ -25,7 +25,16 @@
         <activity android:name=".propertyanimation.LayoutTransitionDemo"/>
         <activity android:name=".propertyanimation.CustomLayoutTransitionDemo"/>
         <activity android:name=".propertyanimation.ViewAnimateDemo"/>
+
         <activity android:name=".fragment.FragmentAnimActivity"/>
+
+        <activity android:name=".material.MaterialAnimationActivity"/>
+        <activity android:name=".material.CircularRevealDemo"/>
+
+        <activity android:theme="@style/MyTheme" android:name=".material.ActivityTransitionDemo" />
+        <activity android:theme="@style/MyTheme" android:name=".material.SecondActivity"/>
+        <activity android:theme="@android:style/Theme.Material" android:name=".material.ActivityTransitionShareElementDemo"/>
+        <activity android:theme="@android:style/Theme.Material" android:name=".material.ImageDetailActivity"/>
     </application>
 
 </manifest>

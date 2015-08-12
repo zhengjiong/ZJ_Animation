@@ -50,7 +50,7 @@ public class FragmentAnimActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-        //fragment退出动画并不能起作用
+        //fragment
         getSupportFragmentManager().popBackStack();
     }
 }
