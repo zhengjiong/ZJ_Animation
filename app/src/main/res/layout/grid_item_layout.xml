@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <example.zj.com.animation.material.SquareFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageview_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </example.zj.com.animation.material.SquareFrameLayout>
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:padding="16dp" />
+    <!--<TextView
+          android:id="@+id/textview_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="?android:attr/colorPrimary"
+          android:theme="@android:style/Theme.Material"
+          android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+          android:maxLines="1"
+          android:padding="16dp" />-->
+
+</LinearLayout>

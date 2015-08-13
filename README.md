@@ -6,4 +6,5 @@
 > * Fragment switch anmiation
 > * CircularReveal Animation
 > * Activity Transition
+> * Activity Transition Compat
 
