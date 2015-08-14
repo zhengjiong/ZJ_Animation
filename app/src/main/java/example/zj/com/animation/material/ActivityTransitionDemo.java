@@ -4,11 +4,15 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.transition.ChangeImageTransform;
 import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.transition.Transition;
+import android.transition.TransitionInflater;
+import android.transition.TransitionSet;
 import android.util.Pair;
 import android.view.View;
 import android.view.Window;
@@ -22,7 +26,7 @@ import example.zj.com.animation.R;
 /**
  * Created by zhengjiong on 15/8/10.
  */
-public class ActivityTransitionDemo extends Activity {
+public class ActivityTransitionDemo extends AppCompatActivity {
 
     @Bind(R.id.btn_explode)
     Button btnExplode;
@@ -53,14 +57,21 @@ public class ActivityTransitionDemo extends Activity {
         switch (view.getId()) {
             case R.id.btn_explode:
                 intent.putExtra("type", 0);
-                /**
-                 * 这里设置退出效果,包含了从SecondActivity返回到当前的enter效果和启动SecondActivity
-                 * 时,此activity的exit效果
-                 */
-                getWindow().setExitTransition(new Explode().setDuration(500));
 
-                //这里设置进入效果是没有任何效果的
+                //getWindow().setExitTransition(new Explode().setDuration(500));
+                /**
+                 * 设置启动SecondActivity时, 当前Activity退出的效果
+                 */
+                Transition explode = TransitionInflater.from(ActivityTransitionDemo.this).inflateTransition(R.transition.activity_explode);
+                getWindow().setExitTransition(explode);
+                /**
+                 * 这里使用setEnterTransition设置重新进入效果是没有任何效果的,
+                 * 如要设置SecondActivity返回时, 此Activity的重新进入效果,需要设置setReenterTranition
+                 */
                 //getWindow().setEnterTransition(new Explode().setDuration(2000));
+                //重新进入的动画
+                getWindow().setReenterTransition(new Explode().setDuration(2000));
+
                 startActivity(
                         intent,
                         ActivityOptions.makeSceneTransitionAnimation(this).toBundle());

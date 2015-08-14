@@ -17,7 +17,7 @@
 
     <style name="MyTheme" parent="android:Theme.Material">
         <!-- 允许使用transitions -->
-        <item name="android:windowContentTransitions">true</item>
+        <!--<item name="android:windowContentTransitions">true</item>-->
 
         <!-- 指定进入和退出transitions -->
         <!--<item name="android:windowEnterTransition">@android:transition/explode</item>-->

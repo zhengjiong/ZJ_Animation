@@ -2,6 +2,7 @@ package example.zj.com.animation.material;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
@@ -16,7 +17,7 @@ import example.zj.com.animation.R;
 /**
  * Created by zhengjiong on 15/8/10.
  */
-public class SecondActivity extends Activity {
+public class SecondActivity extends AppCompatActivity {
 
     @Bind(R.id.btn_share)
     Button btnShare;
@@ -38,22 +39,40 @@ public class SecondActivity extends Activity {
             case 0://explode
                 //设置启动动画
                 getWindow().setEnterTransition(new Explode().setDuration(500));
+
+                /**
+                 * activity退出时的动画,是设置ReturnTransition,而不是ExitTransition
+                 *
+                 * SecondActivity On Back Pressed Transition Framework executes Enter and Exit reverse animations
+                 * respectively (because it cannot find returnTransition and reenterTransition)
+                 *
+                 * Activity 退出时的动画, 如果不设置将会反转进入动画(reverse exit transition)
+                 */
+                getWindow().setReturnTransition(new Fade().setDuration(500));
                 break;
-            case 1:
+            case 1://slide
                 getWindow().setEnterTransition(new Slide().setDuration(500));
+
+                //activity退出时的动画
+                getWindow().setReturnTransition(new Fade().setDuration(500));
                 break;
-            case 2:
+            case 2://fade
                 getWindow().setEnterTransition(new Fade().setDuration(500));
+
+                //activity退出时的动画
+                getWindow().setReturnTransition(new Fade().setDuration(500));
                 break;
-            case 3:
+            case 3://shareElment
                 btnShare.setTransitionName("share");
                 break;
         }
 
 
-        //这里设置退出动画是没有作用的,退出动画会和启动动画完全相反来执行
-        //getWindow().setExitTransition(new Slide().setDuration(900));
-
+        /**
+         * 这里设置退出动画是没有作用的,退出动画会和启动动画完全相反来执行
+         * 如果要设置退出动画需要设置setReturnTransition
+         * getWindow().setExitTransition(new Slide().setDuration(900));
+        **/
 
 
         btnShare.setOnClickListener(new View.OnClickListener() {

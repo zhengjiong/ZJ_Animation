@@ -33,12 +33,14 @@
         <activity android:name=".material.MaterialAnimationActivity"/>
         <activity android:name=".material.CircularRevealDemo"/>
 
-        <activity android:theme="@style/MyTheme" android:name=".material.ActivityTransitionDemo" />
-        <activity android:theme="@style/MyTheme" android:name=".material.SecondActivity"/>
-        <activity android:theme="@android:style/Theme.Material" android:name=".material.ActivityTransitionShareElementDemo"/>
-        <activity android:theme="@android:style/Theme.Material" android:name=".material.ImageDetailActivity"/>
-        <activity android:theme="@style/AppTheme" android:name=".material.ActivityTransitionCompatDemo"/>
-        <activity android:theme="@style/AppTheme" android:name=".material.CompatImageDetail"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.ActivityTransitionDemo" />
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.SecondActivity"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.ActivityTransitionShareElementDemo"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.ImageDetailActivity"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.ActivityTransitionCompatDemo"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.CompatImageDetail"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.SharedElementReturnTransitionDemo"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.SharedElementReturnTransitionDetailActivity"/>
     </application>
 
 </manifest>
