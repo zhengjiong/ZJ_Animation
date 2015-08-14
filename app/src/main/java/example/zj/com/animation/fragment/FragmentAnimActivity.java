@@ -46,11 +46,21 @@ public class FragmentAnimActivity extends AppCompatActivity{
 
             return view;
         }
-    }
 
+        @Override
+        public void onDestroyView() {
+            super.onDestroyView();
+            isDestroy = true;
+        }
+    }
+    private boolean isDestroy;
     @Override
     public void onBackPressed() {
-        //fragment
-        getSupportFragmentManager().popBackStack();
+        //if (getSupportFragmentManager().getFragments().size() == 0) {
+        if(isDestroy){
+            super.onBackPressed();
+        } else {
+            getSupportFragmentManager().popBackStack();
+        }
     }
 }
