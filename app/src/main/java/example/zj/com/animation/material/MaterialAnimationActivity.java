@@ -39,7 +39,8 @@ public class MaterialAnimationActivity extends AppCompatActivity {
                 "Activity Transition",
                 "Activity Transition ShareElement Demo",
                 "Activity Transition Compat (使用ActivityOptionsCompat兼容老板版本,不过老板版本是没有动画的,只有5.0以上才有)",
-                "Activity Transition SharedElementReturnTransition"
+                "Activity Transition SharedElementReturnTransition",
+                "ActivityOptionsCompat"
         };
 
         @Override
@@ -70,6 +71,9 @@ public class MaterialAnimationActivity extends AppCompatActivity {
                     break;
                 case 4:
                     startActivity(new Intent(MaterialAnimationActivity.this, SharedElementReturnTransitionDemo.class));
+                    break;
+                case 5:
+                    startActivity(new Intent(MaterialAnimationActivity.this, ActivityOptionsCompatDemo.class));
                     break;
             }
 

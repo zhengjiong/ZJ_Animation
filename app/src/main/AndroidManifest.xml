@@ -41,6 +41,8 @@
         <activity android:theme="@style/Theme.AppCompat" android:name=".material.CompatImageDetail"/>
         <activity android:theme="@style/Theme.AppCompat" android:name=".material.SharedElementReturnTransitionDemo"/>
         <activity android:theme="@style/Theme.AppCompat" android:name=".material.SharedElementReturnTransitionDetailActivity"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.ActivityOptionsCompatDemo"/>
+        <activity android:theme="@style/Theme.AppCompat" android:name=".material.ActivityOptionsCompatDetail"/>
     </application>
 
 </manifest>
