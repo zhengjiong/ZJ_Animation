@@ -33,7 +33,7 @@ public class MaterialAnimationActivity extends AppCompatActivity {
         }
     }
 
-    class MyListFragment extends ListFragment {
+    public static class MyListFragment extends ListFragment {
         String[] items = {
                 "CircularReveal Animiation",
                 "Activity Transition",
@@ -58,22 +58,22 @@ public class MaterialAnimationActivity extends AppCompatActivity {
         public void onListItemClick(ListView l, View v, int position, long id) {
             switch (position) {
                 case 0:
-                    startActivity(new Intent(MaterialAnimationActivity.this, CircularRevealDemo.class));
+                    startActivity(new Intent(getContext(), CircularRevealDemo.class));
                     break;
                 case 1:
-                    startActivity(new Intent(MaterialAnimationActivity.this, ActivityTransitionDemo.class));
+                    startActivity(new Intent(getContext(), ActivityTransitionDemo.class));
                     break;
                 case 2:
-                    startActivity(new Intent(MaterialAnimationActivity.this, ActivityTransitionShareElementDemo.class));
+                    startActivity(new Intent(getContext(), ActivityTransitionShareElementDemo.class));
                     break;
                 case 3:
-                    startActivity(new Intent(MaterialAnimationActivity.this, ActivityTransitionCompatDemo.class));
+                    startActivity(new Intent(getContext(), ActivityTransitionCompatDemo.class));
                     break;
                 case 4:
-                    startActivity(new Intent(MaterialAnimationActivity.this, SharedElementReturnTransitionDemo.class));
+                    startActivity(new Intent(getContext(), SharedElementReturnTransitionDemo.class));
                     break;
                 case 5:
-                    startActivity(new Intent(MaterialAnimationActivity.this, ActivityOptionsCompatDemo.class));
+                    startActivity(new Intent(getContext(), ActivityOptionsCompatDemo.class));
                     break;
             }
 

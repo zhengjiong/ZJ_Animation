@@ -25,7 +25,7 @@ public class PropertyAnimationActivity extends AppCompatActivity{
         }
     }
 
-    class MainFragment extends ListFragment {
+    public static class MainFragment extends ListFragment {
         String[] items = {"ValueAnimation", "ObjectAnimation", "CustomTypeEvalutor", "AnimatorSet", "XMLAnimatorDemo", "LayoutTransition", "CustomLayoutTransition", "ViewAnimate Method"};
 
         @Override
@@ -43,28 +43,28 @@ public class PropertyAnimationActivity extends AppCompatActivity{
         public void onListItemClick(ListView l, View v, int position, long id) {
             switch (position) {
                 case 0:
-                    startActivity(new Intent(PropertyAnimationActivity.this, ValueAnimationDemo.class));
+                    startActivity(new Intent(getContext(), ValueAnimationDemo.class));
                     break;
                 case 1:
-                    startActivity(new Intent(PropertyAnimationActivity.this, ObjectAnimationDemo.class));
+                    startActivity(new Intent(getContext(), ObjectAnimationDemo.class));
                     break;
                 case 2:
-                    startActivity(new Intent(PropertyAnimationActivity.this, CustomTypeEvalutorDemo.class));
+                    startActivity(new Intent(getContext(), CustomTypeEvalutorDemo.class));
                     break;
                 case 3:
-                    startActivity(new Intent(PropertyAnimationActivity.this, AnimatorSetDemo.class));
+                    startActivity(new Intent(getContext(), AnimatorSetDemo.class));
                     break;
                 case 4:
-                    startActivity(new Intent(PropertyAnimationActivity.this, XMLAnimatorDemo.class));
+                    startActivity(new Intent(getContext(), XMLAnimatorDemo.class));
                     break;
                 case 5:
-                    startActivity(new Intent(PropertyAnimationActivity.this, LayoutTransitionDemo.class));
+                    startActivity(new Intent(getContext(), LayoutTransitionDemo.class));
                     break;
                 case 6:
-                    startActivity(new Intent(PropertyAnimationActivity.this, CustomLayoutTransitionDemo.class));
+                    startActivity(new Intent(getContext(), CustomLayoutTransitionDemo.class));
                     break;
                 case 7:
-                    startActivity(new Intent(PropertyAnimationActivity.this, ViewAnimateDemo.class));
+                    startActivity(new Intent(getContext(), ViewAnimateDemo.class));
                     break;
             }
 

@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    class MainFragment extends ListFragment{
+    public static class MainFragment extends ListFragment{
         String [] items = {"Propery Animation", "Fragment Switch Animation", "Material Animation"};
 
         @Override

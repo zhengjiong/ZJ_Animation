@@ -37,7 +37,7 @@ public class FragmentAnimActivity extends AppCompatActivity{
                 .commit();
     }
 
-    class MyFragment extends Fragment{
+    public static class MyFragment extends Fragment{
 
         @Nullable
         @Override
@@ -53,7 +53,7 @@ public class FragmentAnimActivity extends AppCompatActivity{
             isDestroy = true;
         }
     }
-    private boolean isDestroy;
+    private static boolean isDestroy;
     @Override
     public void onBackPressed() {
         //if (getSupportFragmentManager().getFragments().size() == 0) {

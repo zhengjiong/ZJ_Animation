@@ -1,7 +1,10 @@
 package example.zj.com.animation.material;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -38,7 +41,7 @@ public class ActivityTransitionCompatDemo extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ActivityTransitionCompatDemo.this, CompatImageDetail.class);
-                intent.putExtra("title", ((TextView)view.findViewById(R.id.textview_name)).getText());
+                intent.putExtra("title", ((TextView) view.findViewById(R.id.textview_name)).getText());
 
                 ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                         ActivityTransitionCompatDemo.this,
@@ -46,7 +49,7 @@ public class ActivityTransitionCompatDemo extends AppCompatActivity {
                         new android.support.v4.util.Pair<View, String>(view.findViewById(R.id.textview_name), "title")
                 );
 
-                startActivity(intent, optionsCompat.toBundle());
+                ActivityCompat.startActivity(ActivityTransitionCompatDemo.this, intent, optionsCompat.toBundle());
             }
         });
     }
